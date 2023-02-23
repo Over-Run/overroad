@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+    }
+}
+
+rootProject.name = "overroad"
+
+for (String ver in ["fabric/1.18.2", "fabric/1.19.2"]) {
+    include(ver)
+    project(":$ver").name = ver.replace('/', '-')
+}

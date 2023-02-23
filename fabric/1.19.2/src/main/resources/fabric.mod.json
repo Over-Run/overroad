@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "overroad",
+  "version": "${version}",
+  "name": "Overroad",
+  "description": "A Minecraft traffic mod",
+  "authors": [
+    "Overrun Organization"
+  ],
+  "contributors": [
+    "squid233"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Over-Run/overroad",
+    "sources": "https://github.com/Over-Run/overroad"
+  },
+  "license": "MIT",
+  "icon": "assets/overroad/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.overrun.overroad.Overroad"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric-api": "*",
+    "minecraft": "1.19.2",
+    "java": ">=17"
+  }
+}
