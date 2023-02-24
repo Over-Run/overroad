@@ -12,7 +12,8 @@
   ],
   "contact": {
     "homepage": "https://github.com/Over-Run/overroad",
-    "sources": "https://github.com/Over-Run/overroad"
+    "sources": "https://github.com/Over-Run/overroad",
+    "issues": "https://github.com/Over-Run/overroad/issues"
   },
   "license": "MIT",
   "icon": "assets/overroad/icon.png",
@@ -20,6 +21,9 @@
   "entrypoints": {
     "fabric-datagen": [
       "org.overrun.overroad.data.DataGeneration"
+    ],
+    "client": [
+      "org.overrun.overroad.client.OverroadClient"
     ],
     "main": [
       "org.overrun.overroad.Overroad"

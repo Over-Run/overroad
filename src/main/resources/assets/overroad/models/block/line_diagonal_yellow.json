@@ -1,6 +1,6 @@
 {
   "parent": "overroad:block/line_diagonal_base",
   "textures": {
-    "line": "overroad:item/line_diagonal_yellow"
+    "line": "overroad:block/line_diagonal_yellow"
   }
 }
