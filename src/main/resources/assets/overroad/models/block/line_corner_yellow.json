@@ -1,0 +1,6 @@
+{
+  "parent": "overroad:block/line_block",
+  "textures": {
+    "line": "overroad:item/line_corner_yellow"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "yellow=false,axis=z": {
+      "model": "overroad:block/thick_line_straight"
+    },
+    "yellow=false,axis=x": {
+      "model": "overroad:block/thick_line_straight",
+      "y": 90
+    },
+    "yellow=true,axis=z": {
+      "model": "overroad:block/thick_line_straight_yellow"
+    },
+    "yellow=true,axis=x": {
+      "model": "overroad:block/thick_line_straight_yellow",
+      "y": 90
+    }
+  }
+}

@@ -20,7 +20,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelTemplates;
 import org.overrun.overroad.block.OverroadBlocks;
+
+import static org.overrun.overroad.item.OverroadItems.*;
 
 /**
  * @author squid233
@@ -39,5 +42,15 @@ public final class OverroadModelGen extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        itemModelGenerator.generateFlatItem(LINE_STRAIGHT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_CORNER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_DIAGONAL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_CROSS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_T, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_FORK_LEFT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_FORK_RIGHT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_BEND_LEFT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(LINE_BEND_RIGHT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(THICK_LINE_STRAIGHT, ModelTemplates.FLAT_ITEM);
     }
 }

@@ -29,6 +29,16 @@ import org.overrun.overroad.block.OverroadBlocks;
 public final class OverroadItems {
     public static final Item ROAD_BLOCK = register(OverroadBlocks.ROAD_BLOCK);
     public static final Item CONCRETE_ROAD_BLOCK = register(OverroadBlocks.CONCRETE_ROAD_BLOCK);
+    public static final Item LINE_STRAIGHT = register(OverroadBlocks.LINE_STRAIGHT);
+    public static final Item LINE_CORNER = register(OverroadBlocks.LINE_CORNER);
+    public static final Item LINE_DIAGONAL = register(OverroadBlocks.LINE_DIAGONAL);
+    public static final Item LINE_CROSS = register(OverroadBlocks.LINE_CROSS);
+    public static final Item LINE_T = register(OverroadBlocks.LINE_T);
+    public static final Item LINE_FORK_LEFT = register(OverroadBlocks.LINE_FORK_LEFT);
+    public static final Item LINE_FORK_RIGHT = register(OverroadBlocks.LINE_FORK_RIGHT);
+    public static final Item LINE_BEND_LEFT = register(OverroadBlocks.LINE_BEND_LEFT);
+    public static final Item LINE_BEND_RIGHT = register(OverroadBlocks.LINE_BEND_RIGHT);
+    public static final Item THICK_LINE_STRAIGHT = register(OverroadBlocks.THICK_LINE_STRAIGHT);
 
     public static void init() {
     }

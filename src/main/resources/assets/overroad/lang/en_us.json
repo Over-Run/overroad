@@ -1,5 +1,15 @@
 {
   "block.overroad.road_block": "Road Block",
   "block.overroad.concrete_road_block": "Concrete Road Block",
+  "block.overroad.line_straight": "Straight Line",
+  "block.overroad.line_corner": "Corner Line",
+  "block.overroad.line_diagonal": "Diagonal Line",
+  "block.overroad.line_cross": "Cross Line",
+  "block.overroad.line_t": "T Line",
+  "block.overroad.line_fork_left": "Left Fork Line",
+  "block.overroad.line_fork_right": "Right Fork Line",
+  "block.overroad.line_bend_left": "Left Bend Line",
+  "block.overroad.line_bend_right": "Right Bend Line",
+  "block.overroad.thick_line_straight": "Thick Straight Line",
   "itemGroup.overroad.road_decorations": "Road Decorations"
 }

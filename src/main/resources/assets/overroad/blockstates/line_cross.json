@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "yellow=false": {
+      "model": "overroad:block/line_cross"
+    },
+    "yellow=true": {
+      "model": "overroad:block/line_cross_yellow"
+    }
+  }
+}

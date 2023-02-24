@@ -1,5 +1,15 @@
 {
   "block.overroad.road_block": "道路方块",
   "block.overroad.concrete_road_block": "混凝土道路方块",
+  "block.overroad.line_straight": "直线",
+  "block.overroad.line_corner": "转角线",
+  "block.overroad.line_diagonal": "对角线",
+  "block.overroad.line_cross": "交叉线",
+  "block.overroad.line_t": "T字线",
+  "block.overroad.line_fork_left": "左分叉线",
+  "block.overroad.line_fork_right": "右分叉线",
+  "block.overroad.line_bend_left": "左曲线",
+  "block.overroad.line_bend_right": "右曲线",
+  "block.overroad.thick_line_straight": "粗直线",
   "itemGroup.overroad.road_decorations": "道路装饰"
 }

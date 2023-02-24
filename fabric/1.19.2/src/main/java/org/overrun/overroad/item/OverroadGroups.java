@@ -21,9 +21,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import org.overrun.overroad.Overroad;
-import org.overrun.overroad.block.OverroadBlocks;
 
 import java.util.List;
+
+import static org.overrun.overroad.block.OverroadBlocks.*;
 
 /**
  * @author squid233
@@ -31,10 +32,21 @@ import java.util.List;
  */
 public final class OverroadGroups {
     public static final CreativeModeTab ROAD_DECORATIONS = FabricItemGroupBuilder.create(Overroad.identifier("road_decorations"))
-        .icon(() -> new ItemStack(OverroadBlocks.ROAD_BLOCK))
+        .icon(() -> new ItemStack(ROAD_BLOCK))
         .appendItems(stacks -> appendAll(stacks,
-            OverroadBlocks.ROAD_BLOCK,
-            OverroadBlocks.CONCRETE_ROAD_BLOCK))
+            ROAD_BLOCK,
+            CONCRETE_ROAD_BLOCK,
+            LINE_STRAIGHT,
+            LINE_CORNER,
+            LINE_DIAGONAL,
+            LINE_CROSS,
+            LINE_T,
+            LINE_FORK_LEFT,
+            LINE_FORK_RIGHT,
+            LINE_BEND_LEFT,
+            LINE_BEND_RIGHT,
+            THICK_LINE_STRAIGHT
+        ))
         .build();
 
     public static void init() {
