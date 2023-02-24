@@ -1,4 +1,5 @@
 plugins {
+    id "java"
     id "fabric-loom" version "1.1-SNAPSHOT" apply false
 }
 
@@ -12,6 +13,28 @@ subprojects {
         maven { url = "https://jitpack.io/" }
         maven { url = "https://maven.terraformersmc.com/" }
         maven { url = "https://maven.parchmentmc.org/" }
+    }
+
+    loom {
+        runs {
+            datagenClient {
+                inherit client
+                name "Data Generation"
+                vmArg "-Dfabric-api.datagen"
+                vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+                vmArg "-Dfabric-api.datagen.modid=${modNamespace}"
+
+                runDir "build/datagen"
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            resources {
+                srcDirs += ["src/main/generated"]
+            }
+        }
     }
 
     processResources {
@@ -43,6 +66,7 @@ subprojects {
         manifestContentCharset 'utf-8'
         metadataCharset 'utf-8'
         from('LICENSE') { rename { "${it}_${archivesBaseName}" } }
+        from rootProject.sourceSets.main.resources
     }
 }
 

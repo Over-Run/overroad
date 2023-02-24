@@ -14,29 +14,18 @@
  * copies or substantial portions of the Software.
  */
 
-package org.overrun.overroad;
+package org.overrun.overroad.data;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
-import org.overrun.overroad.block.OverroadBlocks;
-import org.overrun.overroad.item.OverroadGroups;
-import org.overrun.overroad.item.OverroadItems;
+import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 /**
  * @author squid233
  * @since 0.1.0
  */
-public final class Overroad implements ModInitializer {
-    public static final String NAMESPACE = "overroad";
-
-    public static ResourceLocation identifier(String path) {
-        return new ResourceLocation(NAMESPACE, path);
-    }
-
+public final class DataGeneration implements DataGeneratorEntrypoint {
     @Override
-    public void onInitialize() {
-        OverroadBlocks.init();
-        OverroadItems.init();
-        OverroadGroups.init();
+    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        fabricDataGenerator.addProvider(OverroadModelGen::new);
     }
 }

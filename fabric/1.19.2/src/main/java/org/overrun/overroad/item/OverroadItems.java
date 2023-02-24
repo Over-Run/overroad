@@ -14,29 +14,26 @@
  * copies or substantial portions of the Software.
  */
 
-package org.overrun.overroad.block;
+package org.overrun.overroad.item;
 
 import net.minecraft.core.Registry;
-import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import org.overrun.overroad.Overroad;
+import org.overrun.overroad.block.OverroadBlocks;
 
 /**
  * @author squid233
  * @since 0.1.0
  */
-public final class OverroadBlocks {
-    public static final Block ROAD_BLOCK = register("road_block",
-            new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.BLACK)));
-    public static final Block CONCRETE_ROAD_BLOCK = register("concrete_road_block",
-            new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.LIGHT_GRAY)));
+public final class OverroadItems {
+    public static final BlockItem ROAD_BLOCK = register(OverroadBlocks.ROAD_BLOCK);
+    public static final BlockItem CONCRETE_ROAD_BLOCK = register(OverroadBlocks.CONCRETE_ROAD_BLOCK);
 
     public static void init() {
     }
 
-    private static Block register(String name, Block block) {
-        return Registry.register(Registry.BLOCK, Overroad.identifier(name), block);
+    private static BlockItem register(Block block) {
+        return Registry.register(Registry.ITEM, Registry.BLOCK.getKey(block), new BlockItem(block, new Item.Properties()));
     }
 }

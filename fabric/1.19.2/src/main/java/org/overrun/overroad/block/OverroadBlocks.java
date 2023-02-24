@@ -17,10 +17,10 @@
 package org.overrun.overroad.block;
 
 import net.minecraft.core.Registry;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import org.overrun.overroad.Overroad;
 
 /**
@@ -29,9 +29,9 @@ import org.overrun.overroad.Overroad;
  */
 public final class OverroadBlocks {
     public static final Block ROAD_BLOCK = register("road_block",
-            new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)));
+            new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.BLACK)));
     public static final Block CONCRETE_ROAD_BLOCK = register("concrete_road_block",
-            new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_LIGHT_GRAY)));
+            new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.LIGHT_GRAY)));
 
     public static void init() {
     }

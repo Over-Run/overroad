@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "overroad:block/concrete_road_block"
+    }
+  }
+}

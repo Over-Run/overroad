@@ -18,6 +18,9 @@
   "icon": "assets/overroad/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "org.overrun.overroad.data.DataGeneration"
+    ],
     "main": [
       "org.overrun.overroad.Overroad"
     ]

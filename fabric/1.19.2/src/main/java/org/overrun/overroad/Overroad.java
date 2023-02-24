@@ -19,6 +19,8 @@ package org.overrun.overroad;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
 import org.overrun.overroad.block.OverroadBlocks;
+import org.overrun.overroad.item.OverroadGroups;
+import org.overrun.overroad.item.OverroadItems;
 
 /**
  * @author squid233
@@ -34,5 +36,7 @@ public final class Overroad implements ModInitializer {
     @Override
     public void onInitialize() {
         OverroadBlocks.init();
+        OverroadItems.init();
+        OverroadGroups.init();
     }
 }
