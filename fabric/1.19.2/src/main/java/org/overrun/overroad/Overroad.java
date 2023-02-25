@@ -22,6 +22,8 @@ import org.overrun.overroad.block.OverroadBlocks;
 import org.overrun.overroad.block.entity.OverroadBlockEntities;
 import org.overrun.overroad.item.OverroadGroups;
 import org.overrun.overroad.item.OverroadItems;
+import org.overrun.overroad.menu.OverroadMenus;
+import org.overrun.overroad.network.NetworkHandler;
 
 /**
  * @author squid233
@@ -34,11 +36,17 @@ public final class Overroad implements ModInitializer {
         return new ResourceLocation(NAMESPACE, path);
     }
 
+    public static String narratorKey(String path) {
+        return "narration." + NAMESPACE + '.' + path;
+    }
+
     @Override
     public void onInitialize() {
         OverroadBlocks.init();
         OverroadBlockEntities.init();
         OverroadItems.init();
         OverroadGroups.init();
+        OverroadMenus.init();
+        NetworkHandler.init();
     }
 }

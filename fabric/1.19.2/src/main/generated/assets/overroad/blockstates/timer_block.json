@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "overroad:block/timer_block"
+    }
+  }
+}

@@ -38,6 +38,7 @@ public final class OverroadModelGen extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
         blockStateModelGenerator.createTrivialCube(OverroadBlocks.ROAD_BLOCK);
         blockStateModelGenerator.createTrivialCube(OverroadBlocks.CONCRETE_ROAD_BLOCK);
+        blockStateModelGenerator.createTrivialCube(OverroadBlocks.TIMER_BLOCK);
     }
 
     @Override

@@ -13,6 +13,10 @@
   "block.overroad.line_bend_right": "Right Bend Line",
   "block.overroad.thick_line_straight": "Thick Straight Line",
   "block.overroad.traffic_cone": "Traffic Cone",
+  "block.overroad.timer_block": "Timer",
   "item.overroad.road_tool": "Road Tool",
-  "itemGroup.overroad.road_decorations": "Road Decorations"
+  "itemGroup.overroad.road_decorations": "Road Decorations",
+  "narration.overroad.timer_block_screen.timer_value": "Timer value (Ticks): %d",
+  "narration.overroad.timer_block_screen.timer_min": "Minimum value",
+  "narration.overroad.timer_block_screen.timer_max": "Maximum value"
 }

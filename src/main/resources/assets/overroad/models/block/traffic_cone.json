@@ -1,6 +1,5 @@
 {
   "credit": "Made with Blockbench",
-  "ambientocclusion": false,
   "textures": {
     "0": "overroad:block/traffic_cone",
     "1": "overroad:block/orange",

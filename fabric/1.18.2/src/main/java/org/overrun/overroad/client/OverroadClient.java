@@ -18,7 +18,10 @@ package org.overrun.overroad.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
+import org.overrun.overroad.client.screen.TimerBlockScreen;
+import org.overrun.overroad.menu.OverroadMenus;
 
 import static org.overrun.overroad.block.OverroadBlocks.*;
 
@@ -41,5 +44,6 @@ public final class OverroadClient implements ClientModInitializer {
             LINE_BEND_RIGHT,
             THICK_LINE_STRAIGHT
         );
+        MenuScreens.register(OverroadMenus.TIMER_BLOCK_MENU, TimerBlockScreen::new);
     }
 }

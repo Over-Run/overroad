@@ -16,6 +16,7 @@
 
 package org.overrun.overroad.block.entity;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -35,10 +36,10 @@ public final class OverroadBlockEntities {
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String name,
-                                                                       BlockEntityType.BlockEntitySupplier<T> factory,
+                                                                       FabricBlockEntityTypeBuilder.Factory<T> factory,
                                                                        Block... validBlocks) {
         return Registry.register(Registry.BLOCK_ENTITY_TYPE,
             Overroad.identifier(name),
-            BlockEntityType.Builder.of(factory, validBlocks).build(null));
+            FabricBlockEntityTypeBuilder.create(factory, validBlocks).build(null));
     }
 }

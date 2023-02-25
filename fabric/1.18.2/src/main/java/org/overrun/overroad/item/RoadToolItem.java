@@ -40,11 +40,10 @@ public final class RoadToolItem extends Item {
         final BlockPos pos = context.getClickedPos();
         final BlockState state = level.getBlockState(pos);
         if (state.getBlock() instanceof LineBlock) {
-            if (level.isClientSide()) {
-                return InteractionResult.SUCCESS;
+            if (!level.isClientSide()) {
+                level.setBlock(pos, state.cycle(LineBlock.YELLOW), Block.UPDATE_ALL);
             }
-            level.setBlock(pos, state.cycle(LineBlock.YELLOW), Block.UPDATE_ALL);
-            return InteractionResult.CONSUME;
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }

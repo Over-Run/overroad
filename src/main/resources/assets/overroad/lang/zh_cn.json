@@ -13,6 +13,10 @@
   "block.overroad.line_bend_right": "右曲线",
   "block.overroad.thick_line_straight": "粗直线",
   "block.overroad.traffic_cone": "路障",
+  "block.overroad.timer_block": "计时器",
   "item.overroad.road_tool": "道路工具",
-  "itemGroup.overroad.road_decorations": "道路装饰"
+  "itemGroup.overroad.road_decorations": "道路装饰",
+  "narration.overroad.timer_block_screen.timer_value": "计时器值 (刻): %d",
+  "narration.overroad.timer_block_screen.timer_min": "最小值",
+  "narration.overroad.timer_block_screen.timer_max": "最大值"
 }
