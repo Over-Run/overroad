@@ -20,6 +20,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import org.overrun.overroad.Overroad;
 import org.overrun.overroad.block.OverroadBlocks;
 
 /**
@@ -29,6 +30,7 @@ import org.overrun.overroad.block.OverroadBlocks;
 public final class OverroadItems {
     public static final BlockItem ROAD_BLOCK = register(OverroadBlocks.ROAD_BLOCK);
     public static final BlockItem CONCRETE_ROAD_BLOCK = register(OverroadBlocks.CONCRETE_ROAD_BLOCK);
+    public static final Item ROAD_TOOL = register("road_tool", new RoadToolItem(new Item.Properties().stacksTo(1)));
     public static final Item LINE_STRAIGHT = register(OverroadBlocks.LINE_STRAIGHT);
     public static final Item LINE_CORNER = register(OverroadBlocks.LINE_CORNER);
     public static final Item LINE_DIAGONAL = register(OverroadBlocks.LINE_DIAGONAL);
@@ -39,8 +41,14 @@ public final class OverroadItems {
     public static final Item LINE_BEND_LEFT = register(OverroadBlocks.LINE_BEND_LEFT);
     public static final Item LINE_BEND_RIGHT = register(OverroadBlocks.LINE_BEND_RIGHT);
     public static final Item THICK_LINE_STRAIGHT = register(OverroadBlocks.THICK_LINE_STRAIGHT);
+    public static final Item TRAFFIC_CONE = register(OverroadBlocks.TRAFFIC_CONE);
+    public static final Item TIMER_BLOCK = register(OverroadBlocks.TIMER_BLOCK);
 
     public static void init() {
+    }
+
+    private static Item register(String name, Item item) {
+        return Registry.register(Registry.ITEM, Overroad.identifier(name), item);
     }
 
     private static BlockItem register(Block block) {

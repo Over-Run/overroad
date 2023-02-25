@@ -42,6 +42,7 @@ public final class OverroadModelGen extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerator) {
+        itemModelGenerator.generateFlatItem(ROAD_TOOL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(LINE_STRAIGHT, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(LINE_CORNER, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(LINE_DIAGONAL, ModelTemplates.FLAT_ITEM);

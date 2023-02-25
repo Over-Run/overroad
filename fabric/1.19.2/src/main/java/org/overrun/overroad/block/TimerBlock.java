@@ -14,31 +14,31 @@
  * copies or substantial portions of the Software.
  */
 
-package org.overrun.overroad;
+package org.overrun.overroad.block;
 
-import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
-import org.overrun.overroad.block.OverroadBlocks;
-import org.overrun.overroad.block.entity.OverroadBlockEntities;
-import org.overrun.overroad.item.OverroadGroups;
-import org.overrun.overroad.item.OverroadItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import org.overrun.overroad.block.entity.TimerBlockEntity;
 
 /**
  * @author squid233
  * @since 0.1.0
  */
-public final class Overroad implements ModInitializer {
-    public static final String NAMESPACE = "overroad";
-
-    public static ResourceLocation identifier(String path) {
-        return new ResourceLocation(NAMESPACE, path);
+public final class TimerBlock extends BaseEntityBlock {
+    public TimerBlock(Properties properties) {
+        super(properties);
     }
 
     @Override
-    public void onInitialize() {
-        OverroadBlocks.init();
-        OverroadBlockEntities.init();
-        OverroadItems.init();
-        OverroadGroups.init();
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new TimerBlockEntity(pos, state);
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
     }
 }

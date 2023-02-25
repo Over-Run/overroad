@@ -32,20 +32,24 @@ import java.util.function.Function;
  */
 public final class OverroadBlocks {
     private static final Material LINE = new Material.Builder(MaterialColor.SNOW).noCollider().nonSolid().build();
+    private static final Material ORANGE = new Material.Builder(MaterialColor.COLOR_ORANGE).build();
+
     public static final Block ROAD_BLOCK = register("road_block",
         new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.BLACK)));
     public static final Block CONCRETE_ROAD_BLOCK = register("concrete_road_block",
         new Block(BlockBehaviour.Properties.of(Material.STONE, DyeColor.LIGHT_GRAY)));
-    public static final Block LINE_STRAIGHT = lineBlock("line_straight", StraightLineBlock::new);
+    public static final Block LINE_STRAIGHT = lineBlock("line_straight", AxisLineBlock::new);
     public static final Block LINE_CORNER = lineBlock("line_corner");
-    public static final Block LINE_DIAGONAL = lineBlock("line_diagonal");
+    public static final Block LINE_DIAGONAL = lineBlock("line_diagonal", AxisLineBlock::new);
     public static final Block LINE_CROSS = lineBlock("line_cross", LineBlock::new);
     public static final Block LINE_T = lineBlock("line_t");
     public static final Block LINE_FORK_LEFT = lineBlock("line_fork_left");
     public static final Block LINE_FORK_RIGHT = lineBlock("line_fork_right");
     public static final Block LINE_BEND_LEFT = lineBlock("line_bend_left");
     public static final Block LINE_BEND_RIGHT = lineBlock("line_bend_right");
-    public static final Block THICK_LINE_STRAIGHT = lineBlock("thick_line_straight", StraightLineBlock::new);
+    public static final Block THICK_LINE_STRAIGHT = lineBlock("thick_line_straight", AxisLineBlock::new);
+    public static final Block TRAFFIC_CONE = register("traffic_cone", new TrafficConeBlock(BlockBehaviour.Properties.of(ORANGE)));
+    public static final Block TIMER_BLOCK = register("timer_block", new TimerBlock(BlockBehaviour.Properties.of(Material.METAL)));
 
     public static void init() {
     }

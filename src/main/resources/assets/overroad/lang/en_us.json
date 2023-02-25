@@ -1,6 +1,7 @@
 {
   "block.overroad.road_block": "Road Block",
   "block.overroad.concrete_road_block": "Concrete Road Block",
+  "block.overroad.line_block.tooltip": "Use the road tool to change the color",
   "block.overroad.line_straight": "Straight Line",
   "block.overroad.line_corner": "Corner Line",
   "block.overroad.line_diagonal": "Diagonal Line",
@@ -11,5 +12,7 @@
   "block.overroad.line_bend_left": "Left Bend Line",
   "block.overroad.line_bend_right": "Right Bend Line",
   "block.overroad.thick_line_straight": "Thick Straight Line",
+  "block.overroad.traffic_cone": "Traffic Cone",
+  "item.overroad.road_tool": "Road Tool",
   "itemGroup.overroad.road_decorations": "Road Decorations"
 }

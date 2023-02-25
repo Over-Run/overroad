@@ -34,6 +34,7 @@ public final class OverroadGroups {
     public static final CreativeModeTab ROAD_DECORATIONS = FabricItemGroupBuilder.create(Overroad.identifier("road_decorations"))
         .icon(() -> new ItemStack(ROAD_BLOCK))
         .appendItems(stacks -> appendAll(stacks,
+            OverroadItems.ROAD_TOOL,
             ROAD_BLOCK,
             CONCRETE_ROAD_BLOCK,
             LINE_STRAIGHT,
@@ -45,7 +46,9 @@ public final class OverroadGroups {
             LINE_FORK_RIGHT,
             LINE_BEND_LEFT,
             LINE_BEND_RIGHT,
-            THICK_LINE_STRAIGHT
+            THICK_LINE_STRAIGHT,
+            TRAFFIC_CONE,
+            TIMER_BLOCK
         ))
         .build();
 

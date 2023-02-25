@@ -26,8 +26,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
  * @author squid233
  * @since 0.1.0
  */
-public final class StraightLineBlock extends LineBlock {
-    public StraightLineBlock(Properties properties) {
+public final class AxisLineBlock extends LineBlock {
+    public AxisLineBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(AXIS, Direction.Axis.Z));
     }

@@ -1,34 +1,18 @@
 {
   "variants": {
-    "yellow=false,facing=north": {
+    "yellow=false,axis=z": {
       "model": "overroad:block/line_diagonal"
     },
-    "yellow=false,facing=east": {
+    "yellow=false,axis=x": {
       "model": "overroad:block/line_diagonal",
       "y": 90
     },
-    "yellow=false,facing=south": {
-      "model": "overroad:block/line_diagonal",
-      "y": 180
-    },
-    "yellow=false,facing=west": {
-      "model": "overroad:block/line_diagonal",
-      "y": 270
-    },
-    "yellow=true,facing=north": {
+    "yellow=true,axis=z": {
       "model": "overroad:block/line_diagonal_yellow"
     },
-    "yellow=true,facing=east": {
+    "yellow=true,axis=x": {
       "model": "overroad:block/line_diagonal_yellow",
       "y": 90
-    },
-    "yellow=true,facing=south": {
-      "model": "overroad:block/line_diagonal_yellow",
-      "y": 180
-    },
-    "yellow=true,facing=west": {
-      "model": "overroad:block/line_diagonal_yellow",
-      "y": 270
     }
   }
 }

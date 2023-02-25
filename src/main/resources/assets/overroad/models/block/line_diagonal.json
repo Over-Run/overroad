@@ -1,6 +1,7 @@
 {
-  "parent": "overroad:block/line_diagonal_base",
+  "parent": "overroad:block/line_block",
   "textures": {
-    "line": "overroad:block/line_diagonal"
+    "line": "overroad:item/line_diagonal",
+    "particle": "overroad:block/white"
   }
 }

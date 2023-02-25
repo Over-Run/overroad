@@ -1,6 +1,6 @@
 {
   "textures": {
-    "particle": "#line"
+    "particle": "#particle"
   },
   "elements": [
     {

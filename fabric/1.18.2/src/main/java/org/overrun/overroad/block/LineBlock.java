@@ -16,8 +16,13 @@
 
 package org.overrun.overroad.block;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,12 +33,16 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
+import org.overrun.overroad.Overroad;
+
+import java.util.List;
 
 /**
  * @author squid233
  * @since 0.1.0
  */
-public sealed class LineBlock extends Block permits FacingLineBlock, StraightLineBlock {
+public sealed class LineBlock extends Block permits FacingLineBlock, AxisLineBlock {
     public static final BooleanProperty YELLOW = BooleanProperty.create("yellow");
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -48,6 +57,12 @@ public sealed class LineBlock extends Block permits FacingLineBlock, StraightLin
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(YELLOW);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, level, tooltip, flag);
+        tooltip.add(new TranslatableComponent("block." + Overroad.NAMESPACE + ".line_block.tooltip").withStyle(ChatFormatting.DARK_GRAY));
     }
 
     @Override
